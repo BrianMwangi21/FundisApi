@@ -11,6 +11,14 @@
 |
 */
 
+use Illuminate\Http\Request;
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/submit', function (Request $request) {
+    return view('submit');
+});
+
+Route::post('/submit/new','OrdersController@store');
