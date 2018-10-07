@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Fundis</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
@@ -91,9 +91,6 @@
                 @endif
 
                 {!! csrf_field() !!}
-                <div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
-                    <input type="text" class="form-control" id="order_id" name="order_id" placeholder="Order ID" value="{{ old('title') }}">
-                </div>
                 <div class="form-group{{ $errors->has('url') ? ' has-error' : '' }}">
                     <input type="text" class="form-control" id="order_category" name="order_category" placeholder="Order category" value="{{ old('url') }}">
                 </div>
@@ -101,23 +98,25 @@
                     <input type="text" class="form-control" id="order_description" name="order_description" placeholder="Order description" value="{{ old('title') }}">
                 </div>
                 <div class="form-group{{ $errors->has('url') ? ' has-error' : '' }}">
-                    <input type="text" class="form-control" id="order_extra_description" name="order_extra_description" placeholder="order_extra_description" value="{{ old('url') }}">
+                    <input type="text" class="form-control" id="order_extra_description" name="order_extra_description" placeholder="Order extra description" value="{{ old('url') }}">
                 </div>
                 <div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
-                    <input type="text" class="form-control" id="torder_location_area" name="order_location_area" placeholder="order_location_area" value="{{ old('title') }}">
+                    <input type="text" class="form-control" id="torder_location_area" name="order_location_area" placeholder="Location area" value="{{ old('title') }}">
                 </div>
                 <div class="form-group{{ $errors->has('url') ? ' has-error' : '' }}">
-                    <input type="text" class="form-control" id="order_location_street" name="order_location_street" placeholder="order_location_street" value="{{ old('url') }}">
+                    <input type="text" class="form-control" id="order_location_street" name="order_location_street" placeholder="Location street" value="{{ old('url') }}">
                 </div>
                 <div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
-                    <input type="text" class="form-control" id="order_location_house" name="order_location_house" placeholder="order_location_house" value="{{ old('title') }}">
+                    <input type="text" class="form-control" id="order_location_house" name="order_location_house" placeholder="Location house number" value="{{ old('title') }}">
                 </div>
                 <div class="form-group{{ $errors->has('url') ? ' has-error' : '' }}">
-                    <input type="text" class="form-control" id="order_phonenumber" name="order_phonenumber" placeholder="order_phonenumber" value="{{ old('url') }}">
+                    <input type="text" class="form-control" id="order_phonenumber" name="order_phonenumber" placeholder="Phone number" value="{{ old('url') }}">
                 </div>
                 <div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
-                    <input type="text" class="form-control" id="order_time" name="order_time" placeholder="order_time" value="{{ old('title') }}">
+                    <input type="date" class="form-control" id="order_time" name="order_time" placeholder="Time" value="{{ old('title') }}">
                 </div>
+
+                <br>
                 <button type="submit" class="btn btn-default">Submit</button>
             </form>
                 </div>
