@@ -113,7 +113,7 @@
                     <input type="text" class="form-control" id="order_phonenumber" name="order_phonenumber" placeholder="Phone number" value="{{ old('url') }}">
                 </div>
                 <div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
-                    <input type="date" class="form-control" id="order_time" name="order_time" placeholder="Time" value="{{ old('title') }}">
+                    <input type="text" class="form-control" id="order_time" name="order_time" placeholder="Time" value="{{ old('title') }}">
                 </div>
 
                 <br>

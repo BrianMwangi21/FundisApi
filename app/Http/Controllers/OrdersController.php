@@ -9,7 +9,6 @@ class OrdersController extends Controller
 {
     public function store(Request $request){
     	$data = $request->validate([
-	        'order_id' => 'required',
 	        'order_category' => 'required',
 	        'order_description' => 'required',
 	        'order_extra_description' => 'required',
@@ -21,7 +20,7 @@ class OrdersController extends Controller
 	    ]);    
 
 	    $order = new Orders();
-        $order->order_id = request('order_id');
+        $order->order_id = 'F - ' . rand(1000,9999);
         $order->order_category = request('order_category');
         $order->order_description = request('order_description');
         $order->order_extra_description = request('order_extra_description');

@@ -12,6 +12,7 @@
 */
 
 use Illuminate\Http\Request;
+use App\Orders;
 
 Route::get('/', function () {
     return view('submit');
@@ -22,3 +23,8 @@ Route::get('/submit', function (Request $request) {
 });
 
 Route::post('/submit/new','OrdersController@store');
+
+Route::get('/portal',function (){
+    $orders = Orders::all();
+    return view('portal',['orders'=>$orders]);
+});
